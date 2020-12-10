@@ -1,0 +1,16 @@
+<template>
+    <lightning-layout multiple-rows title="Product App">
+        <lightning-layout-item size="6" title="Checkout">
+            <c-conga-buy></c-conga-buy>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" title="Compare">
+            <c-conga-compare></c-conga-compare>
+        </lightning-layout-item>
+        <lightning-layout-item size="8" title="List">
+            <c-conga-list products={products} ontileclicked={handleTileClicked} onbuy={handleBuy} oncompare={handleCompare}></c-conga-list>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" title="Detail">
+            <c-conga-detail selected-product-id={selectedProductId} onbuy={handleBuy} oncompare={handleCompare}></c-conga-detail>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
