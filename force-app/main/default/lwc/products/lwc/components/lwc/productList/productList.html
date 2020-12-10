@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="Product List">
+
+        <div class="list-container" style="padding: 10px;">
+            <template for:each={props.products} for:item="product">
+                <c-product-detail key={product.id} product={product}></c-product-detail>
+            </template>
+            <br />
+            <br />
+            <br />
+            <lightning-button label="View Cart" data-id="viewcart" onclick={handleClick}></lightning-button> &nbsp; &nbsp; &nbsp;
+            <lightning-button label="View Compare" data-id="viewcompare" onclick={handleClick}></lightning-button> 
+        </div>
+    </lightning-card>
+</template>

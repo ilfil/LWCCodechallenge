@@ -1,0 +1,9 @@
+<template>
+    
+    <div>
+        <span style="font-weight: bold;">{product.name}</span> (<span class="duration">${product.price}</span>)
+        <lightning-button label="View" title="Non-primary action" data-id="details" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button label="Add/Remove for Compare" title="Non-primary action" data-id="compare" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button label="Add to Cart" title="Non-primary action" data-id="cart" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+    </div>
+</template>
