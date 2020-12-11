@@ -1,3 +1,7 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
-export default class CheckoutPage extends LightningElement {}
+export default class CheckoutPage extends LightningElement {
+
+    @api buyproducts;
+    @api total;
+}

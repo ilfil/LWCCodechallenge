@@ -1,3 +1,19 @@
 <template>
-    
-</template>
+    Product list
+       <lightning-layout multiple-rows>
+          <template for:each={products} for:item="p">
+             <lightning-layout-item onclick={handleProductClicked} data-record={p.Id} key={p.Id} size="3">
+                   <lightning-card title={p.Name}>
+                      <img src={p.imgLink} alt="Product Image"/>
+                      <div>
+                         Price: 
+                         <lightning-formatted-number value={p.price} format-style="currency" currency-code="USD" maximum-fraction-digits="2"></lightning-formatted-number>
+                      </div>
+                      <div>Description: {p.Description}</div>
+                      <lightning-button label="Compare" data-record={p.Id} onclick={handleCompareClick}></lightning-button>
+                      <lightning-button label="Buy" data-record={p.Id} onclick={handleBuyClick}></lightning-button>
+                   </lightning-card>
+             </lightning-layout-item>
+          </template>
+       </lightning-layout>
+ </template>

@@ -1,3 +1,20 @@
 <template>
-    
+    Detail
+    <template if:false={product}>
+        <lightning-card><p>Select a product.</p></lightning-card>
+    </template>
+    <template if:true={product}>
+        <lightning-card title={product.name}>
+
+            <lightning-button label="Compare" onclick={handleCompareClick}></lightning-button>
+            <lightning-button label="Buy" onclick={handleBuyClick}></lightning-button>
+
+            <img src={product.imgLink} alt="Product Image"/><br>
+            Price: <lightning-formatted-number value={product.price} format-style="currency" currency-code="USD" maximum-fraction-digits="2"></lightning-formatted-number><br>
+            Color: {product.color}<br>    
+            Dimensions: {product.dimensions}<br>   
+            Rating: {product.rating}<br>   
+            Description: {product.Description}<br>
+        </lightning-card>
+    </template>
 </template>

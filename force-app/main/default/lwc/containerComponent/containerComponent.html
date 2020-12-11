@@ -1,6 +1,6 @@
 <template>
-    <c-product-list></c-product-list>
-    <c-product-detail></c-product-detail>
-    <c-compare-page></c-compare-page>
-    <c-checkout-page></c-checkout-page>
+    <c-product-list onproductbuyclicked={handleProductBuyClicked} onproductcompareclicked={handleCompareSelected} onproductclicked={handleProductClicked} ></c-product-list>
+    <c-product-detail onbuyselected={handleProductBuyClicked} oncompareselected={handleCompareSelected} product={currentProduct}></c-product-detail>
+    <c-compare-page compareproducts={compareProducts}></c-compare-page>
+    <c-checkout-page total={total} buyproducts={buyProducts}></c-checkout-page>
 </template>

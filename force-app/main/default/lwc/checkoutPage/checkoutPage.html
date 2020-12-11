@@ -1,3 +1,12 @@
 <template>
-    
+    Checkout
+    <lightning-layout multiple-rows>
+    <template for:each={buyproducts} for:item="p">
+        <lightning-layout-item size="4" key={p.Id}>
+            <div class="left-align" style="width:250px;">
+                <c-product-detail product={p}></c-product-detail></div>
+        </lightning-layout-item>
+    </template>
+    </lightning-layout>
+    TOTAL: {total}
 </template>

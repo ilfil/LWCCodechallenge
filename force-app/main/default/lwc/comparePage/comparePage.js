@@ -1,3 +1,6 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
-export default class ComparePage extends LightningElement {}
+export default class ComparePage extends LightningElement {
+
+    @api compareproducts;
+}
